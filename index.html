@@ -1,0 +1,33 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="tableGen.css" media="screen"/>
+    </head>
+    <body>
+        <div id="input">
+            <p id="heading">HTML Table Generator</p>
+
+            <div id="div1">
+            Enter Number of rows: <input type="number" id="rows" min="1" max="5">
+            Table Width in percentage:<input type="number" id="width"  min="10" max="90">
+            Table background color:<input type="button" id="backgroundColor">
+            Border Color:<input type="button" id="borderColor">
+            </div>
+
+            <div id="div2">
+            Enter Number of colums:<input type="number" id="column" min="1" max="5">
+            Border Width in pixels: <input type="number" id="border">
+           Body background color:<input type="button" id="bodyColor"  min="10" max="90">
+           <input type="button" id="generateButton" value="GenerateTable." onclick="generateTable()">
+            </div>
+
+    
+        </div>
+
+       <script src="tableGen.js"></script>
+    </body>
+    </html>
