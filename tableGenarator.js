@@ -5,6 +5,7 @@ let wrapper = document.createElement('div');
 
 
 function generateTable(){
+    wrapper.innerHTML  = "";
     let rowsInput = document.getElementById("rows");
     let rowsInputValue = rowsInput.value;
 
@@ -13,6 +14,20 @@ function generateTable(){
 
     // create a <table> element and a <tbody> element
     let table = document.createElement("table");
+    let thead = document.createElement("thead");
+    table.appendChild(thead);
+    let trow  = document.createElement("tr");
+
+    for (let j = 1; j <= rowsInputValue; j++) {
+        // Create a <th> element and a text node
+        let cell = document.createElement("th");
+        let cellText = document.createTextNode("Head"+j); 
+        cell.appendChild(cellText);
+        trow.appendChild(cell);   
+      }
+      thead.appendChild(trow);
+      table.appendChild(thead);
+
     let tableBody = document.createElement("tbody");
     table.appendChild(tableBody);
 // creating all cells
@@ -23,7 +38,7 @@ for (let i = 0; i < columnInputValue; i++) {
     for (let j = 0; j < rowsInputValue; j++) {
       // Create a <td> element and a text node
       let cell = document.createElement("td");
-      let cellText = document.createTextNode("value in row "+i+", column "+j);
+      let cellText = document.createTextNode("value"); 
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
@@ -44,8 +59,9 @@ for (let i = 0; i < columnInputValue; i++) {
   bodybgcolorFunction();
   fontsFunction();
   fontWeightFunction();
-  borderInpixels()
-  
+  borderInpixels();
+  textAlignFunction();
+  tableWidthFunction();
     
 }
 
@@ -97,4 +113,17 @@ function borderInpixels(){
     });
     document.querySelector("table").style.borderCollapse = "collapse";
 
+}
+
+function textAlignFunction(){
+    let textAlign = document.querySelector("#text-align");
+    tableBody = document.querySelector("tbody");
+    tableBody.style.textAlign = textAlign.value;
+
+}
+
+function tableWidthFunction(){
+    let tableWidth = document.querySelector("#tableWidth");
+    tableBody = document.querySelector("table");
+    tableBody.style.width = tableWidth.value + "%";
 }

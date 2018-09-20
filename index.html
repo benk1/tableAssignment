@@ -13,9 +13,10 @@
                 <p id="heading">HTML Table Generator</p>
          <div id="div1">
      
-            Enter Number of rows: <input type="number" id="rows" min="1" max="5">
-            Table Width in percentage:<input type="number" id="width"  min="10" max="90">
+            Enter Number of columns: <input type="number" id="rows" min="1" max="5">
+            Table Width in percentage:<input onchange="tableWidthFunction()" type="number" id="tableWidth"  min="10" max="90">
             Table background color:<input type="color" id="backgroundColor" onchange="bgcolorFunction()">
+            </div>
             Border Color:<input type="color" id="borderColor" onchange="borderInpixels()">
   
             <label for="select">Fonts type</label>
@@ -36,14 +37,15 @@
             </div>
 
              Head background color:<input type="color" id="headbackgroundColor" onchange="headbgColorFunction()">
-            <th id="tableHeader">HTML Table Generator</th>
+            
 
             <div id="div2">
-            Enter Number of colums:<input type="number" id="column" min="1" max="5">
+            Enter Number of rows:<input type="number" id="column" min="1" max="5">
             Border Width in pixels: <input type="number" id="border" onchange="borderInpixels()">
             Body background color:<input type="color" id="bodybackgroundColor" onchange="bodybgcolorFunction()">
+            </div>
            <label for="text-align">Text align</label>
-            <select id="text-align">
+            <select onchange="textAlignFunction()" id="text-align">
                 <option value="center">Center</option>
                 <option value="right">Right</option>
                 <option value="left">Left</option>

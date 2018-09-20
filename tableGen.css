@@ -56,3 +56,8 @@ justify-content: center;
 /*background-color: blue;*/
 /*width: 700px;*/
 }
+
+table {
+    margin: 5px auto;
+
+}
