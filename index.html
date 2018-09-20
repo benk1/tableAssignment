@@ -10,12 +10,13 @@
     <body>
             <!--<p id="heading">HTML Table Generator</p>-->
         <div id="input">
+                <p id="heading">HTML Table Generator</p>
          <div id="div1">
-             
+     
             Enter Number of rows: <input type="number" id="rows" min="1" max="5">
             Table Width in percentage:<input type="number" id="width"  min="10" max="90">
             Table background color:<input type="color" id="backgroundColor" onchange="bgcolorFunction()">
-            Border Color:<input type="color" id="borderColor" onchange="borderColorFunction()">
+            Border Color:<input type="color" id="borderColor" onchange="borderInpixels()">
   
             <label for="select">Fonts type</label>
             <select onchange="fontsFunction()" id="select">
@@ -25,11 +26,11 @@
                 <option value="palatino">Palatino</option>
               </select>
               <!--<input type="number" id="pixels" onchange="fontWeightFunction()">-->
-              <select onchange="fontWeightFunction()" id="select">
-                    <option value="">100</option>
-                    <option value="">300</option>
-                    <option value="">600</option>
-                    <option value="">900</option>
+              <select onchange="fontWeightFunction()" id="pixels">
+                    <option value="100">100</option>
+                    <option value="300">300</option>
+                    <option value="600">600</option>
+                    <option value="900">900</option>
             </select>
               
             </div>

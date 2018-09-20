@@ -90,9 +90,11 @@ function fontWeightFunction(){
 
 function borderInpixels(){
     let borderInPixels = document.querySelector("#border");
+    let bdColor = document.querySelector("#borderColor");
     let items = document.querySelectorAll("td, th, table");
     items.forEach((elem) => {
-        elem.style.border = borderInPixels.value + "px" + "solid" ;
+        elem.style.border = borderInPixels.value + "px " + "solid " + bdColor.value ;
     });
+    document.querySelector("table").style.borderCollapse = "collapse";
 
 }
