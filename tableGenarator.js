@@ -14,7 +14,7 @@ function generateTable(){
     // create a <table> element and a <tbody> element
     let table = document.createElement("table");
     let tableBody = document.createElement("tbody");
-
+    table.appendChild(tableBody);
 // creating all cells
 for (let i = 0; i < columnInputValue; i++) {
     // creates a table row
@@ -41,6 +41,10 @@ for (let i = 0; i < columnInputValue; i++) {
   //table.setAttribute("border", "1");
   //borderColorFunction();
   bgcolorFunction();
+  bodybgcolorFunction();
+  fontsFunction();
+  fontWeightFunction();
+  borderInpixels()
   
     
 }
@@ -65,5 +69,30 @@ function bgcolorFunction(){
     table.style.headbgColorFunction = hbgColor.value;
 }*/
 
+function bodybgcolorFunction(){
+    let bordercolor = document.querySelector("#bodybackgroundColor");
+    let body= document.querySelector("body");
+    body.style.background= bordercolor.value;
+}
 
+function fontsFunction(){
+    let fonts = document.querySelector("#select");
+    tableBody = document.querySelector("tbody");
+    tableBody.style.fontFamily = fonts.value;
 
+}
+
+function fontWeightFunction(){
+    let fonWeight = document.querySelector("#pixels");
+    tableBody = document.querySelector("tbody");
+    tableBody.style.fontWeight= fonWeight.value;
+}
+
+function borderInpixels(){
+    let borderInPixels = document.querySelector("#border");
+    let items = document.querySelectorAll("td, th, table");
+    items.forEach((elem) => {
+        elem.style.border = borderInPixels.value + "px" + "solid" ;
+    });
+
+}

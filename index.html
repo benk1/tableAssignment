@@ -19,11 +19,18 @@
   
             <label for="select">Fonts type</label>
             <select onchange="fontsFunction()" id="select">
-                <option value="veldana">Veldana</option>
+                <option value="verdana">Verdana</option>
                 <option value="courier">Courier</option>
                 <option value="georgia">Georgia</option>
                 <option value="palatino">Palatino</option>
               </select>
+              <!--<input type="number" id="pixels" onchange="fontWeightFunction()">-->
+              <select onchange="fontWeightFunction()" id="select">
+                    <option value="">100</option>
+                    <option value="">300</option>
+                    <option value="">600</option>
+                    <option value="">900</option>
+            </select>
               
             </div>
 
@@ -32,8 +39,8 @@
 
             <div id="div2">
             Enter Number of colums:<input type="number" id="column" min="1" max="5">
-            Border Width in pixels: <input type="number" id="border">
-            Body background color:<input           type="color" id="bodybackgroundColor" onchange="bodybgcolorFunction()">
+            Border Width in pixels: <input type="number" id="border" onchange="borderInpixels()">
+            Body background color:<input type="color" id="bodybackgroundColor" onchange="bodybgcolorFunction()">
            <label for="text-align">Text align</label>
             <select id="text-align">
                 <option value="center">Center</option>
