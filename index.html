@@ -8,26 +8,45 @@
         <link rel="stylesheet" type="text/css" href="tableGen.css" media="screen"/>
     </head>
     <body>
+            <!--<p id="heading">HTML Table Generator</p>-->
         <div id="input">
-            <p id="heading">HTML Table Generator</p>
-
-            <div id="div1">
+         <div id="div1">
+             
             Enter Number of rows: <input type="number" id="rows" min="1" max="5">
             Table Width in percentage:<input type="number" id="width"  min="10" max="90">
-            Table background color:<input type="button" id="backgroundColor">
-            Border Color:<input type="button" id="borderColor">
+            Table background color:<input type="color" id="backgroundColor" onchange="bgcolorFunction()">
+            Border Color:<input type="color" id="borderColor" onchange="borderColorFunction()">
+  
+            <label for="select">Fonts type</label>
+            <select onchange="fontsFunction()" id="select">
+                <option value="veldana">Veldana</option>
+                <option value="courier">Courier</option>
+                <option value="georgia">Georgia</option>
+                <option value="palatino">Palatino</option>
+              </select>
+              
             </div>
+
+             Head background color:<input type="color" id="headbackgroundColor" onchange="headbgColorFunction()">
+            <th id="tableHeader">HTML Table Generator</th>
 
             <div id="div2">
             Enter Number of colums:<input type="number" id="column" min="1" max="5">
             Border Width in pixels: <input type="number" id="border">
-           Body background color:<input type="button" id="bodyColor"  min="10" max="90">
-           <input type="button" id="generateButton" value="GenerateTable." onclick="generateTable()">
+            Body background color:<input           type="color" id="bodybackgroundColor" onchange="bodybgcolorFunction()">
+           <label for="text-align">Text align</label>
+            <select id="text-align">
+                <option value="center">Center</option>
+                <option value="right">Right</option>
+                <option value="left">Left</option>
+                <option value="start">Start</option>
+              </select>
+           <input type="button" id="generateButton" value="GenerateTable" onclick="generateTable()">
             </div>
 
     
         </div>
 
-       <script src="tableGen.js"></script>
+       <script src="tableGenarator.js"></script>
     </body>
     </html>
