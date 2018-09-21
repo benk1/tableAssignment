@@ -10,53 +10,61 @@
     <body>
             <!--<p id="heading">HTML Table Generator</p>-->
         <div id="input">
-                <p id="heading">HTML Table Generator</p>
-         <div id="div1">
-     
-            Enter Number of columns: <input type="number" id="rows" min="1" max="5">
+            <!--<p id="heading">HTML Table Generator</p>-->
+        <div id="smallDiv">
+            <div id="div1">
+            Enter Number of columns: <input type="number" id="rows" min="1" max="10">
             Table Width in percentage:<input onchange="tableWidthFunction()" type="number" id="tableWidth"  min="10" max="90">
-            Table background color:<input type="color" id="backgroundColor" onchange="bgcolorFunction()">
             </div>
-            Border Color:<input type="color" id="borderColor" onchange="borderInpixels()">
-  
-            <label for="select">Fonts type</label>
-            <select onchange="fontsFunction()" id="select">
-                <option value="verdana">Verdana</option>
-                <option value="courier">Courier</option>
-                <option value="georgia">Georgia</option>
-                <option value="palatino">Palatino</option>
-              </select>
-              <!--<input type="number" id="pixels" onchange="fontWeightFunction()">-->
-              <select onchange="fontWeightFunction()" id="pixels">
-                    <option value="100">100</option>
-                    <option value="300">300</option>
-                    <option value="600">600</option>
-                    <option value="900">900</option>
-            </select>
-              
-            </div>
-
-             Head background color:<input type="color" id="headbackgroundColor" onchange="headbgColorFunction()">
             
-
             <div id="div2">
-            Enter Number of rows:<input type="number" id="column" min="1" max="5">
-            Border Width in pixels: <input type="number" id="border" onchange="borderInpixels()">
-            Body background color:<input type="color" id="bodybackgroundColor" onchange="bodybgcolorFunction()">
-            </div>
-           <label for="text-align">Text align</label>
-            <select onchange="textAlignFunction()" id="text-align">
-                <option value="center">Center</option>
-                <option value="right">Right</option>
-                <option value="left">Left</option>
-                <option value="start">Start</option>
-              </select>
-           <input type="button" id="generateButton" value="GenerateTable" onclick="generateTable()">
+                    Enter Number of rows:<input type="number" id="column" min="1" max="5">
+                    Border Width in pixels: <input type="number" id="border" onchange="borderInpixels()">
+                    </div>
+           </div>
+
+
+           
+           <div id="divColors">
+           Table background color:<input type="color" id="backgroundColor" onchange="bgcolorFunction()">
+           Head background color:<input type="color" id="headbackgroundColor" onchange="headbgColorFunction()">
+           Body background color:<input type="color" id="bodybackgroundColor" onchange="bodybgcolorFunction()">
+           </div>
+
+           <div id="colors2">
+            Border Color:<input type="color" id="borderColor" onchange="borderInpixels()">
+            Font Color:<input type="color" id="fontColor" onchange="fontColor()">
+           </div>
+           
+               <div id="div3">
+                    <label for="select">Fonts type</label>
+                    <select onchange="fontsFunction()" id="select">
+                      <option value="verdana">Verdana</option>
+                      <option value="courier">Courier</option>
+                      <option value="georgia">Georgia</option>
+                      <option value="palatino">Palatino</option>
+                    </select>
+
+                    <select onchange="fontWeightFunction()" id="pixels">
+                            <option value="100">100</option>
+                            <option value="300">300</option>
+                            <option value="600">600</option>
+                            <option value="900">900</option>
+                       </select>
+
+                       <label for="text-align">Text align</label>
+                   <select onchange="textAlignFunction()" id="text-align">
+                   <option value="center">Center</option>
+                   <option value="right">Right</option>
+                   <option value="left">Left</option>
+                  <option value="start">Start</option>
+                  </select>
+                  <input type="button" id="generateButton" value="GenerateTable" onclick="generateTable()">
+                    </div>        
             </div>
 
-    
-        </div>
-
+            </div>
+            </div>
        <script src="tableGenarator.js"></script>
     </body>
     </html>

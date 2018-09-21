@@ -62,6 +62,7 @@ for (let i = 0; i < columnInputValue; i++) {
   borderInpixels();
   textAlignFunction();
   tableWidthFunction();
+  fontColor();
     
 }
 
@@ -126,4 +127,10 @@ function tableWidthFunction(){
     let tableWidth = document.querySelector("#tableWidth");
     tableBody = document.querySelector("table");
     tableBody.style.width = tableWidth.value + "%";
+}
+
+function fontColor(){
+    let fontColor = document.querySelector("#fontColor");
+    let body = document.querySelector("body");
+    body.style.fontColor = fontColor.value;
 }

@@ -10,8 +10,10 @@
 
 
 #column{
-    width: 6em;
-    height: 1em;
+width: 6em;
+height: 1em;
+
+margin: 0;
 }
 #fonts{
     width: 6em;
@@ -25,13 +27,22 @@
 
 #border{
     width: 6em;
-    height: 1em;
+height: 1em;
+margin: 0px;
+}
+
+#bodybackgroundColor{
+    margin-top: 2%;
 }
 
 #width{
     width: 6em;
     height: 1em;
     
+}
+#tableWidth{
+    width: 6em;
+    height: 1em;
 }
 
 #tableHeader{
@@ -41,15 +52,52 @@ justify-content: center;
 
 #input{
     display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-top: 5%;
-    border: 1px solid black;
-    background-color:green;
-    width: 72%;
+    flex-direction: column;
+    width: 80%;
     color: antiquewhite;
     font-size: 12px;
+    background-color:green;
+    height: 180px;
+    margin: 0 auto;
 }
+
+#smallDiv{
+    display: flex;
+    justify-content: center;
+    width: 59%;
+    text-align: center;
+    margin: auto;
+}
+
+#div1{
+margin-left: 20px;
+}
+
+#div2{
+    margin-left: 20px;
+}
+
+
+
+
+
+#div3{
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    text-align: center;
+    }
+
+    #divColors{
+        margin:auto;
+    }
+
+    #colors2{
+        margin: auto;
+    }
+
+
 
 #wrapperId{
 /*border: 1px solid black;
