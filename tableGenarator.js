@@ -47,7 +47,6 @@ for (let i = 0; i < columnInputValue; i++) {
     tableBody.appendChild(row);
   }
 
-
   // put the <tablebody> in the <table>
   table.appendChild(tableBody);
   wrapper.appendChild(table);
@@ -88,7 +87,7 @@ function bgcolorFunction(){
 
 function bodybgcolorFunction(){
     let bordercolor = document.querySelector("#bodybackgroundColor");
-    let body= document.querySelector("body");
+    let body = document.querySelector("body");
     body.style.background= bordercolor.value;
 }
 
